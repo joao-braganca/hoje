@@ -17,6 +17,8 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 img{
@@ -42,10 +44,13 @@ button{
     font-size: 40px;
     width: 450px;
     cursor: pointer;
+    position: relative;
+}
+.sim{
     transition: 0.5s;
 }
 
-button:hover{
+.sim:hover{
     scale: 1.05;
     box-shadow: 7px 7px 7px #000;
 }
@@ -57,3 +62,22 @@ button:hover{
     gap: 50px;
 }
 
+.coracao{
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 125px;
+    width: 180px;
+    background-image: url("../img/coracao.png");
+    background-size: 100% 100%;
+    animation: falling 1s;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100px) scale(1);
+    }
+    100% {
+        transform: translateY(78vh) scale(1);
+    }
+}
